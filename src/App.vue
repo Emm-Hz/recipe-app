@@ -1,30 +1,42 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <router-link to="/">
+    <img class="logo" src="@/assets/logo.webp" alt="Cuisine" />
+  </router-link>
+  <search />
+  <categories />
+  <router-view />
 </template>
 
+<script>
+import Categories from "@/components/Categories.vue";
+import Search from "./components/Search.vue";
+export default {
+  components: {
+    Categories,
+    Search,
+  },
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.logo {
+  max-width: 7rem;
+  margin-left: 4rem;
 }
 
-nav {
-  padding: 30px;
+.wrap {
+  margin: 3rem;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+@media screen and (max-width: 48rem) {
+  .logo {
+    display: flex;
+    max-width: 14rem;
+    margin: auto;
+  }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+  .wrap {
+    margin: 1rem;
+  }
 }
 </style>

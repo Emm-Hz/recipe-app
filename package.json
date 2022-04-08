@@ -7,9 +7,14 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@splidejs/vue-splide": "^0.5.18",
+    "@vueuse/motion": "^2.0.0-beta.12",
     "core-js": "^3.8.3",
+    "oh-vue-icons": "^1.0.0-rc2",
     "vue": "^3.2.13",
+    "vue-carousel": "^0.18.0",
     "vue-router": "^4.0.3",
+    "vueperslides": "^3.3.2",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
